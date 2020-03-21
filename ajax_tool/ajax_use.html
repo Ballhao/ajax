@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>测试工具</h2>
+    <input type="button" class="get" value="get">
+    <input type="button" class="ajax" value="post">
+    <input type="button" class="json" value="json">
+</body>
+</html>
+<script src="./ajaxall.js"></script>
+<script>
+    document.querySelector('.json').onclick = function(){
+        
+        ajax_text({
+            url:'http://apis.juhe.cn/rubbish/category',
+            type:'get',
+            data:'key=557bdcba3235b466baef6d98d0a05ace',
+            success:function(data){
+                console.log(data);
+            }
+        });
+    }
+   
+</script>
